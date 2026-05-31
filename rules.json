@@ -1,0 +1,32 @@
+{
+  "categories": {
+    "security_alert": {
+      "keywords_subject": ["выиграли", "розыгрыш", "верификация", "пароль", "блокировк"],
+      "keywords_body": ["prize", "totally-not-spam", "secure-login-verify", "введите логин и пароль", "cdn-service.net"]
+    },
+    "critical_incidents": {
+      "keywords_subject": ["не отвечает", "не работает", "падает", "критичный", "сбой"],
+      "keywords_body": ["ошибка 500", "полностью остановлена", "не отвечает с", "500 уже"]
+    },
+    "it_support": {
+      "keywords_subject": ["неисправность", "гарнитура", "принтер", "сканер", "ноутбук", "ошибка в"],
+      "keywords_body": ["не включается", "зависает при", "не определяется", "сломался screen", "ремонт"]
+    },
+    "access_requests": {
+      "keywords_subject": ["права в", "доступ к", "выдать права"],
+      "keywords_body": ["прошу выдать доступ", "нужны права на", "пропал доступ"]
+    },
+    "hr_admin": {
+      "keywords_subject": ["отпуск", "больничный", "оформление"],
+      "keywords_body": ["период нетрудоспособности", "ежегодный отпуск", "нового сотрудника", "рабочее место и доступы"]
+    },
+    "finance_docs": {
+      "keywords_subject": ["счёт", "акт", "документы", "договор"],
+      "keywords_body": ["закрывающие документы", "оплата по договору", "получение счёта", "акт за оказанные"]
+    },
+    "monitoring": {
+      "keywords_subject": ["плановый отчёт", "monitoring", "disk usage", "healthcheck"],
+      "keywords_body": ["database cluster", "uptime:", "ошибок 5xx", "автоматическое уведомление"]
+    }
+  }
+}
