@@ -49,11 +49,15 @@ class Email:
                     matched = True
                     break
 
+            if matched:
+                body_start_idx = idx + 1
+                continue
+
             if not line.strip() and self.headers:
                 body_start_idx = idx + 1
                 break
 
-            if not matched and self.headers and idx > 0:
+            if not matched and self.headers:
                 body_start_idx = idx
                 break
 
@@ -67,3 +71,4 @@ class Email:
     @property
     def sender(self) -> str:
         return self.headers.get("from", "")
+
