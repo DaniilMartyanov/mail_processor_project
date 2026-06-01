@@ -29,10 +29,10 @@ class Email:
             raise FileParseError(f"Файл пуст или недоступен для чтения: {self.file_path.name}")
 
         header_patterns = {
-            "from": re.compile(r"^(From|От кого):\s*(.*)$", re.IGNORECASE),
-            "to": re.compile(r"^(To|Кому):\s*(.*)$", re.IGNORECASE),
-            "date": re.compile(r"^(Date|Дата):\s*(.*)$", re.IGNORECASE),
-            "subject": re.compile(r"^(Subject|Тема):\s*(.*)$", re.IGNORECASE)
+            "from": re.compile(r"^(From|От кого|Ot kogo):\s*(.*)$", re.IGNORECASE),
+            "to": re.compile(r"^(To|Кому|Komu):\s*(.*)$", re.IGNORECASE),
+            "date": re.compile(r"^(Date|Дата|Data):\s*(.*)$", re.IGNORECASE),
+            "subject": re.compile(r"^(Subject|Тема|Tema):\s*(.*)$", re.IGNORECASE)
         }
 
         lines = content.splitlines()
