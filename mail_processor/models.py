@@ -14,6 +14,8 @@ class Email:
         self._parse()
 
     def _parse(self) -> None:
+        if self.file_path.suffix.lower() != '.txt':
+            raise FileParseError(f"Неподдерживаемое расширение файла: {self.file_path.name}")
 
         content = ""
 
