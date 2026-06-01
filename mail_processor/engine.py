@@ -69,3 +69,18 @@ class EmailProcessor:
             logging.info(f"Аналитический отчет сохранен в {report_path}")
         except OSError as e:
             logging.error(f"Не удалось создать файл отчета: {e}")
+
+        try:
+            import matplotlib.pyplot as plt
+            active_stats = {k: v for k, v in self.stats.items() if v > 0}
+            if active_stats:
+                plt.figure(figsize=(8, 4))
+                plt.barh(list(active_stats.keys()), list(active_stats.values()), color='#2980b9')
+                plt.title("Распределение писем по категориям", fontsize=12, fontweight='bold')
+                plt.xlabel("Количество (шт.)")
+                plt.tight_layout()
+                plt.savefig(self.dst_dir / "report_chart.png", dpi=150)
+                plt.close()
+                logging.info("График аналитики сохранен.")
+        except ImportError:
+            logging.warning("Библиотека matplotlib не найдена. График не построен.")
